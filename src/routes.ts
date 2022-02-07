@@ -6,6 +6,7 @@ import { DeleteLauncheController } from "./controller/DeleteLauncheController";
 import { GetAllEventsController } from "./controller/GetAllEventsController";
 import { GetAllLaunchesController } from "./controller/GetAllLaunchesController";
 import { UpdateEventController } from "./controller/UpdateEventController";
+import { UpdateLauncheController } from "./controller/UpdateLauncheController";
 
 const routes = Router();
 
@@ -17,5 +18,6 @@ routes.put("/events/:id", new UpdateEventController().handle);
 routes.post("/launches", new CreateLauncheController().handle);
 routes.get("/launches", new GetAllLaunchesController().handle);
 routes.delete("/launches/:id", new DeleteLauncheController().handle);
+routes.put("/launches/:id", new UpdateLauncheController().handle);
 
 export { routes };
