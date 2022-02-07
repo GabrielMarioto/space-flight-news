@@ -8,6 +8,7 @@ import { DeleteLauncheController } from "./controller/DeleteLauncheController";
 import { GetAllArticlesController } from "./controller/GetAllArticlesController";
 import { GetAllEventsController } from "./controller/GetAllEventsController";
 import { GetAllLaunchesController } from "./controller/GetAllLaunchesController";
+import { UpdateArticleController } from "./controller/UpdateArticleController";
 import { UpdateEventController } from "./controller/UpdateEventController";
 import { UpdateLauncheController } from "./controller/UpdateLauncheController";
 
@@ -32,4 +33,5 @@ routes.get("/", (req, res) => {
 routes.post("/articles/:", new CreateArticleController().handle);
 routes.get("/articles/:", new GetAllArticlesController().handle);
 routes.delete("/articles/:id", new DeleteArticleController().handle);
+routes.put("/articles/:id", new UpdateArticleController().handle);
 export { routes };
