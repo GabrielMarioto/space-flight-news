@@ -2,6 +2,7 @@ import { Router } from "express";
 import { CreateArticleController } from "./controller/CreateArticleController";
 import { CreateEventController } from "./controller/CreateEventController";
 import { CreateLauncheController } from "./controller/CreateLauncheController";
+import { DeleteArticleController } from "./controller/DeleteArticleController";
 import { DeleteEventController } from "./controller/DeleteEventController";
 import { DeleteLauncheController } from "./controller/DeleteLauncheController";
 import { GetAllArticlesController } from "./controller/GetAllArticlesController";
@@ -30,4 +31,5 @@ routes.get("/", (req, res) => {
 
 routes.post("/articles/:", new CreateArticleController().handle);
 routes.get("/articles/:", new GetAllArticlesController().handle);
+routes.delete("/articles/:id", new DeleteArticleController().handle);
 export { routes };
