@@ -4,6 +4,7 @@ import { CreateEventController } from "./controller/CreateEventController";
 import { CreateLauncheController } from "./controller/CreateLauncheController";
 import { DeleteEventController } from "./controller/DeleteEventController";
 import { DeleteLauncheController } from "./controller/DeleteLauncheController";
+import { GetAllArticlesController } from "./controller/GetAllArticlesController";
 import { GetAllEventsController } from "./controller/GetAllEventsController";
 import { GetAllLaunchesController } from "./controller/GetAllLaunchesController";
 import { UpdateEventController } from "./controller/UpdateEventController";
@@ -28,4 +29,5 @@ routes.get("/", (req, res) => {
 });
 
 routes.post("/articles/:", new CreateArticleController().handle);
+routes.get("/articles/:", new GetAllArticlesController().handle);
 export { routes };

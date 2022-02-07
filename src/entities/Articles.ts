@@ -46,7 +46,7 @@ export class Articles {
   @JoinColumn({ name: "launches_id" })
   launches: Launches[];
 
-  @ManyToOne(() => Launches)
+  @ManyToOne(() => Events)
   @JoinColumn({ name: "events_id" })
   events: Events[];
 
